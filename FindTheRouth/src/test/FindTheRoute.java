@@ -73,7 +73,7 @@ public class FindTheRoute extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FindTheRoute");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setLocation(new java.awt.Point(350, 50));
+        setLocation(new java.awt.Point(610, 50));
         setMinimumSize(new java.awt.Dimension(600, 600));
         setResizable(false);
 
@@ -189,10 +189,11 @@ public class FindTheRoute extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new FindTheRoute().setVisible(true);
-
+                new OptionPanel().setVisible(true);    
             }
         });
 
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
