@@ -47,11 +47,11 @@ public class OptionPanel extends javax.swing.JFrame {
         TextFieldOrder3 = new javax.swing.JTextField();
         TextFieldOrder4 = new javax.swing.JTextField();
         TextFieldOrder5 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<String>();
+        jComboBox2 = new javax.swing.JComboBox<String>();
+        jComboBox3 = new javax.swing.JComboBox<String>();
+        jComboBox4 = new javax.swing.JComboBox<String>();
+        jComboBox5 = new javax.swing.JComboBox<String>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -75,15 +75,15 @@ public class OptionPanel extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("Roads:");
 
-        jLabel8.setText("Road 1 (R1):");
+        jLabel8.setText("Road 1 (S1 - S2):");
 
-        jLabel9.setText("Road 2 (R2):");
+        jLabel9.setText("Road 2 (S2 - S3):");
 
-        jLabel10.setText("Road 3 (R3):");
+        jLabel10.setText("Road 3 (S3 - S4):");
 
-        jLabel11.setText("Road 4 (R4):");
+        jLabel11.setText("Road 4 (S4 - S5):");
 
-        jLabel12.setText("Road 5 (R5):");
+        jLabel12.setText("Road 5 (S5 - S2):");
 
         TextFieldOrder1.setName("OrderStore1"); // NOI18N
 
@@ -95,19 +95,19 @@ public class OptionPanel extends javax.swing.JFrame {
 
         TextFieldOrder5.setName("OrderStore5"); // NOI18N
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Available", "Unavailable" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Available", "Unavailable" }));
         jComboBox1.setName("Road1State"); // NOI18N
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Available", "Unavailable" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Available", "Unavailable" }));
         jComboBox2.setName("Road2State"); // NOI18N
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Available", "Unavailable" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Available", "Unavailable" }));
         jComboBox3.setName("Road3State"); // NOI18N
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Available", "Unavailable" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Available", "Unavailable" }));
         jComboBox4.setName("Road4State"); // NOI18N
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Available", "Unavailable" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Available", "Unavailable" }));
         jComboBox5.setName("Road5State"); // NOI18N
 
         jButton1.setText("Ok");
@@ -154,7 +154,7 @@ public class OptionPanel extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(TextFieldOrder1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel12)
