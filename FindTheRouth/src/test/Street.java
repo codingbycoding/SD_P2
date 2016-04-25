@@ -10,5 +10,19 @@ package test;
  * @author sarahjessica
  */
 public class Street {
+    Boolean accesible;
+    String name;
     
+    public Street (Boolean accesible, String name) {
+        this.accesible = accesible;
+        this.name = name;
+    }
+    
+    public Boolean getAccesible (){
+        return this.accesible;
+    }
+    
+    public String getName (){
+        return this.name;
+    }
 }
