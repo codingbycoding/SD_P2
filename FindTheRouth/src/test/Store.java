@@ -11,14 +11,23 @@ package test;
  */
 public class Store extends Vertex {
    String name;
+   String type; //(Emisor or Receptor)
+   Order placeOrder;
    
-   public Store(int i, int j, String name){
+   
+   public Store(int i, int j, String name, String type){
        super(i,j);
        this.name = name;
+       this.type = type;
    }
     
    public String getName()
    {
-      return name;
+      return this.name;
+   }
+   
+   public String getType()
+   {
+      return this.type;
    }
 }
