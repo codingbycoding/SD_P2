@@ -26,7 +26,7 @@ public class Vertex {
 
         for (int i = 0; i < arrNumEachRow.size(); i++) {
             ArrayList<Integer> arrRowEach = TestUtils.shuffle0To9();
-            for (int k = arrNumEachRow.get(i), j = 0; k > 0; k--, j++) {
+            for (int k = arrNumEachRow.get(i), j = 0; k > 0; k--, j++) {                             
                 Vertex index = new Vertex(arrRows.get(i), arrRowEach.get(j));
                 arrVertex.add(index);
             }

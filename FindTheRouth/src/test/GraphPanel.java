@@ -53,6 +53,7 @@ public class GraphPanel extends JPanel {
          */
         for (int i = 0; i < arrVertex.size(); i++) {
             g.fillOval(4 * f_r + arrVertex.get(i).x * 10 * f_r - f_r, 4 * f_r + arrVertex.get(i).y * 10 * f_r - f_r, f_r * 4, f_r * 4);
+            g.drawString("S" + Integer.toString(i+1), 4 * f_r + arrVertex.get(i).x * 10 * f_r - f_r, 4 * f_r + arrVertex.get(i).y * 10 * f_r - f_r);
         }
 
         for (int i = 0; i < arrEdge.size(); i++) {
