@@ -1,3 +1,4 @@
+
 /*
  * Copyright (c) 2010, Oracle. All rights reserved.
  *
@@ -51,6 +52,12 @@ public class FindTheRoute extends javax.swing.JFrame {
         refreshPopupMenu = new javax.swing.JPopupMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         DrawPanel = new GraphPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
 
         refreshPopupMenu.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
@@ -77,6 +84,7 @@ public class FindTheRoute extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(600, 600));
         setResizable(false);
 
+        DrawPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         DrawPanel.setMaximumSize(new java.awt.Dimension(600, 600));
         DrawPanel.setMinimumSize(new java.awt.Dimension(600, 600));
         DrawPanel.setName(""); // NOI18N
@@ -99,19 +107,56 @@ public class FindTheRoute extends javax.swing.JFrame {
         DrawPanel.setLayout(DrawPanelLayout);
         DrawPanelLayout.setHorizontalGroup(
             DrawPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 600, Short.MAX_VALUE)
+            .add(0, 598, Short.MAX_VALUE)
         );
         DrawPanelLayout.setVerticalGroup(
             DrawPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 600, Short.MAX_VALUE)
+            .add(0, 598, Short.MAX_VALUE)
         );
+
+        jLabel1.setText("Step 1 :");
+
+        jLabel2.setText("Step 2 :");
+
+        jButton1.setText("Orders+Roads");
+        jButton1.setMargin(new java.awt.Insets(2, 10, 2, 10));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Confirm");
+
+        jLabel3.setText("Step 3 :");
+
+        jButton3.setText("Send orders");
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                        .add(layout.createSequentialGroup()
+                            .add(16, 16, 16)
+                            .add(jLabel1))
+                        .add(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .add(jButton1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE))
+                        .add(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .add(jLabel2))
+                        .add(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .add(jButton2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .add(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 102, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jLabel3))))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 41, Short.MAX_VALUE)
                 .add(DrawPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -119,7 +164,21 @@ public class FindTheRoute extends javax.swing.JFrame {
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(DrawPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(DrawPanel, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(layout.createSequentialGroup()
+                        .add(50, 50, 50)
+                        .add(jLabel1)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jButton1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 36, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(53, 53, 53)
+                        .add(jLabel2)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jButton2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 36, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(62, 62, 62)
+                        .add(jLabel3)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jButton3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 36, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -142,7 +201,7 @@ public class FindTheRoute extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        DrawPanel.refreshGraphPanel();
+        //DrawPanel.refreshGraphPanel();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void DrawPanelMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DrawPanelMouseReleased
@@ -151,6 +210,11 @@ public class FindTheRoute extends javax.swing.JFrame {
             showPopupMenu(evt);
         }
     }//GEN-LAST:event_DrawPanelMouseReleased
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        new OptionPanel().setVisible(true); 
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     
     private void showPopupMenu(MouseEvent e) {
@@ -189,17 +253,32 @@ public class FindTheRoute extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new FindTheRoute().setVisible(true);
-                new OptionPanel().setVisible(true);    
+                //new OptionPanel().setVisible(true);    
             }
         });
 
         
     }
-
+/*
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private GraphPanel DrawPanel;
+    private javax.swing.JPanel DrawPanel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPopupMenu refreshPopupMenu;
     // End of variables declaration//GEN-END:variables
-
+*/
+    private GraphPanel DrawPanel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JPopupMenu refreshPopupMenu;
 }
